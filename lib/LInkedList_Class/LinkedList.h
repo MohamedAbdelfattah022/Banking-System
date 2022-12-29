@@ -22,18 +22,6 @@ class ClientLinkedList
 public:
     // Constructor to set head equal NULL
     ClientLinkedList()  {head = NULL; tail = NULL;}
-
-    // function to add Node from tail
-    void insert(Client el)
-    {
-        if(head == NULL)
-            head = tail = new LinkedListNode(el);
-        else
-        {
-            tail->next = new LinkedListNode(el);
-            tail = tail->next;
-        }
-    }
  
     // function to return size of linked list
     int size() {return m_size;}
