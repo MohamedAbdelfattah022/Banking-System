@@ -33,5 +33,7 @@ int m_size;
 };
 
 
+//array containing the heads of clients' linked lists
+LinkedListNode * arrayOfClients[10];
 
 #endif
