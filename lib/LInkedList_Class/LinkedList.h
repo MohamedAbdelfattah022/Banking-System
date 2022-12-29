@@ -21,13 +21,13 @@ class ClientLinkedList
 {
 public:
     // Constructor to set head equal NULL
-    ClientLinkedList()  {head = NULL;}
-
+    ClientLinkedList()  {head = NULL; tail = NULL;}
+ 
     // function to return size of linked list
     int size() {return m_size;}
 
 private:
-LinkedListNode* head;
+LinkedListNode* head, *tail;
 int m_size;
 
 };
