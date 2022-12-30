@@ -1,7 +1,7 @@
 #ifndef CLIENT_H
 #define CLIENT_H
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 class Client
@@ -36,7 +36,10 @@ clientPhone = p;
 ClientAddress = a;
 }
 
-// setters
+
+
+
+// Setter
 
 void setClientName(string name) { clientName = name;}
 void setClientEmail(string email) {clientEmail = email;}
@@ -45,7 +48,9 @@ void setclientAddress(string address) {ClientAddress = address;}
 void setclientPassword(string password) {clientPassword = password;}
 void setclientID(int id) {clientID = id;}
 
-// getters
+
+
+// Getter
 
 string getClientName(){return clientName;}
 string getClientEmail() {return clientEmail;}
