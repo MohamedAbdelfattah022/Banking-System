@@ -2,75 +2,105 @@
 #define CLIENT_H
 
 #include <bits/stdc++.h>
+#include "../Transaction_Class/Transaction.cpp"
+
 using namespace std;
 
 class Client
 {
-
 private:
 
-string clientName, clientEmail, clientPhone, ClientAddress, clientPassword;
-int clientID;
+    string clientName, clientEmail, clientPhone, clientAddress, clientPassword;
+    int clientID;
 
-// <Transaction array>
+    int transactionCount;
+    // <Transaction array>
+    Transaction clientTransaction[5];
 
 public:
 
-// constructor
+    // Empty Constructor to initialize All with zeros and empty strings
+    Client()
+    {
+        // initialization all string with empty string
+        clientName = clientEmail = clientPhone = clientAddress = clientPassword =  "";
 
-Client(){
-clientName=""; 
-clientEmail=""; 
-clientPhone=""; 
-ClientAddress=""; 
-clientPassword="";
-clientID=0;
-// Transaction
-}
+        // initialization client ID and transactionCount = zero
+        clientID = transactionCount = 0;
 
-Client(string n, string e, string p, string a)
-{
-clientName = n;
-clientEmail = e;
-clientPhone = p;
-ClientAddress = a;
-}
+        // initialization Array of clientTransaction = zeros
+        for(int i=0; i<5; i++)
+            clientTransaction[i] = {0};
+    }
 
-
-
-
-// Setter
-
-void setClientName(string name) { clientName = name;}
-void setClientEmail(string email) {clientEmail = email;}
-void setclientPhone(string phone) {clientPhone = phone;}
-void setclientAddress(string address) {ClientAddress = address;}
-void setclientPassword(string password) {clientPassword = password;}
-void setclientID(int id) {clientID = id;}
+    // Parameterized Constructor to initialize client (Name, Email, Phone, Address)
+    Client(string name, string email, string phone, string address, int id)
+    {
+        clientName = name;
+        clientEmail = email;
+        clientPhone = phone;
+        clientAddress = address;
+        clientID = id;
+        transactionCount = 0;
+    }
 
 
+    // Setter
 
-// Getter
+    void setClientName(string name) { clientName = name;}
+    void setClientEmail(string email) {clientEmail = email;}
+    void setClientPhone(string phone) {clientPhone = phone;}
+    void setClientAddress(string address) {clientAddress = address;}
+    void setClientPassword(string password) {clientPassword = password;}
+    void setClientID(int id) {clientID = id;}
+    
+    // setter of Transaction
+    bool setTransaction(Transaction trans)
+    {
+        if(transactionCount == 5)
+        {
+            cout << "No more transactions are allowed for this client\n";
+            return 0;
+        }
+        else
+        {
+            // push transaction in clientTransaction array and increment transactionCount by 1
+            clientTransaction[transactionCount++] = trans;
+        }
+        return 1;
+    }
 
-string getClientName(){return clientName;}
-string getClientEmail() {return clientEmail;}
-string getclientPhone() {return clientPhone;}
-string getclientAddress() {return ClientAddress;}
-string getclientPassword() {return clientPassword;}
-int getclientID() {return clientID;}
 
+    // Getter
 
-// Function that print client info
+    string getClientName(){return clientName;}
+    string getClientEmail() {return clientEmail;}
+    string getClientPhone() {return clientPhone;}
+    string getClientAddress() {return clientAddress;}
+    string getClientPassword() {return clientPassword;}
+    int getClientID() {return clientID;}
 
-void print_client_info(){
+    // Getter for Client Transaction array
+    void getClientTransaction()
+    {
+        // funciton to print all client Transactions
+        for(int i=0; i< transactionCount; i++)
+        {
+            clientTransaction[i].printTransactionInfo();
+            cout << "\n";
+        }
+    }
 
-cout<<"Name: "<<clientName<<endl;
-cout<<"ID: "<<clientID<<endl;
-cout<<"Email: "<<clientEmail<<endl;
-cout<<"Phone: "<<clientPhone<<endl;
-cout<<"Address: "<<ClientAddress<<endl;
+    // Function that print client info
 
-}
+    void print_client_info()
+    {
+        cout<<"Name: "<< clientName<<endl;
+        cout<<"ID: "<< clientID<<endl;
+        cout<<"Email: " << clientEmail<<endl;
+        cout<<"Phone: " << clientPhone<<endl;
+        cout<<"Address: " << clientAddress<<endl;
+    }
 
 };
 
