@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-class transaction
+class Transaction
 {
 private:
     // attributes
@@ -13,9 +13,9 @@ private:
 
 public:
     // Default constructor imblementation
-    transaction();
+    Transaction();
     // Parameterized constructor imblementation
-     transaction(int id);
+     Transaction(int id);
     // setters
     void setId(int id);
     void setName(string name);
