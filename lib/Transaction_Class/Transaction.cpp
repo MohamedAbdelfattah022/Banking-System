@@ -1,48 +1,48 @@
 #include "Transaction.h"
 #include <iostream>
 using namespace std;
-// Default constructor imblementation
-transaction::transaction()
+// Default constructor implementation
+Transaction::Transaction()
 {
     transactionID = 0;
     transactionName = "";
     transactionDate = "";
 }
- // Parameterized constructor imblementation
- transaction::transaction(int id)
+ // Parameterized constructor implementation
+ Transaction::Transaction(int id)
  {
      transactionID = id;
      transactionName = "Withdraw";
      transactionDate = "14/Dec/2022";
  }
-// setters imblementation
-void transaction::setId(int id)
+// Setters implementation
+void Transaction::setId(int id)
 {
     transactionID = id;
 }
-void transaction::setName(string name)
+void Transaction::setName(string name)
 {
     transactionName = name;
 }
-void transaction::setDate(string date)
+void Transaction::setDate(string date)
 {
     transactionDate = date;
 }
-// getters imblementation
-int transaction::getId()
+// Getters implementation
+int Transaction::getId()
 {
     return transactionID;
 }
-string transaction::getName()
+string Transaction::getName()
 {
     return transactionName;
 }
-string transaction::getDate()
+string Transaction::getDate()
 {
     return transactionDate;
 }
-// print function imblementation
-void transaction::printTransactionInfo()
+// Print function implementation
+void Transaction::printTransactionInfo()
 {
     cout << "Transaction Id: " << getId() << endl;
     cout << "Transaction Name: " << getName() << endl;
