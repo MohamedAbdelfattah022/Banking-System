@@ -56,6 +56,12 @@ void loginMenue()
 // hash Function
 int hashFunction(string s)
 {
+    /*
+        function to do hashing
+        1- take string "email"
+        2- summation of string
+        and return it '%' size of array to put in it. 
+    */
     int sum = 0;
     for(int i=0; i<(int)s.size(); i++)
     {
