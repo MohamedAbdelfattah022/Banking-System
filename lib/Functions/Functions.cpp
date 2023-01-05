@@ -17,7 +17,7 @@ using namespace std;
 void welcomeText()
 {
     cout << "=============================================================\n";
-    cout << "++++++++++++++++Welcome to the banking system++++++++++++++++\n";
+    cout << "++++++++++++++++ Welcome to the banking system ++++++++++++++++\n";
 }
 
 
@@ -50,5 +50,62 @@ void loginMenue()
         3... -
     */
 
+
+}
+
+// hash Function
+int hashFunction(string s)
+{
+    /*
+        function to do hashing
+        1- take string "email"
+        2- summation of string
+        and return it '%' size of array to put in it. 
+    */
+    int sum = 0;
+    for(int i=0; i<(int)s.size(); i++)
+    {
+        sum += s[i];
+    }
+
+    return sum%10;
+}
+
+bool newClient()
+{
+    /* 
+        Function to add newClient in system
+
+        take from user name, email, phone, password, address
+
+        push user email to hashfunction to return index 
+        push user to arrayOfClient by using index
+        check if user not exist in linkedlist by email
+        then push in this index "linked list" by using insert function
+
+    */
+
+    string name, email, phone, address, password;
+    Client newClient;
+    welcomeText();
+    cout << "++++++++++++++++ Create a new client account ++++++++++++++++";
+    cout << "\nPlease write your name\n>>";       
+    cin >> name;        newClient.setClientName(name);   
+    cout << "\nPlease write your email\n>>";
+    cin >> email;       newClient.setClientEmail(email);  
+    cout << "\nPlease write your phone\n>>";
+    cin >> phone;       newClient.setClientPhone(phone);  
+    cout << "\nPlease write your password\n>>";
+    cin >> password;    newClient.setClientPassword(password);  
+    cout << "\nPlease write your address\n>>";
+    cin >> address;     newClient.setClientAddress(address);  
+
+    int indx = hashFunction(email);
+
+    if(arrayOfClients[indx]->isExist(email))
+        return 0;
+    
+    arrayOfClients[indx]->insert(newClient);
+    return 1;
 
 }

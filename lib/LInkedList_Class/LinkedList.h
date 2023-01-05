@@ -22,7 +22,15 @@ class ClientLinkedList
 public:
     // Constructor to set head equal NULL
     ClientLinkedList()  {head = NULL; tail = NULL;}
- 
+    
+    // sort linked list // bonus function
+    void sort();
+
+    // insert new client
+    bool insert(Client);
+
+    bool isExist(string);
+
     // function to return size of linked list
     int size() {return m_size;}
 
@@ -34,6 +42,6 @@ int m_size;
 
 
 //array containing the heads of clients' linked lists
-LinkedListNode * arrayOfClients[10];
+ClientLinkedList * arrayOfClients[10];
 
 #endif

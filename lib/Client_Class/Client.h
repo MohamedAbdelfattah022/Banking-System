@@ -25,8 +25,11 @@ public:
         // initialization all string with empty string
         clientName = clientEmail = clientPhone = clientAddress = clientPassword =  "";
 
-        // initialization client ID and transactionCount = zero
-        clientID = transactionCount = 0;
+        // initialization transactionCount = zero
+        transactionCount = 0;
+
+        // initialization clientID to by random fucntion
+        clientID = rand();
 
         // initialization Array of clientTransaction = zeros
         for(int i=0; i<5; i++)
@@ -34,13 +37,14 @@ public:
     }
 
     // Parameterized Constructor to initialize client (Name, Email, Phone, Address)
-    Client(string name, string email, string phone, string address, int id)
+    Client(string name, string email, string phone,string password, string address)
     {
         clientName = name;
         clientEmail = email;
         clientPhone = phone;
         clientAddress = address;
-        clientID = id;
+        clientPassword = password;
+        clientID = rand();
         transactionCount = 0;
     }
 
