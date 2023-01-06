@@ -2,9 +2,9 @@
 #define INCLUDE
 
 // include classes we Implemeneted
-#include "../Client_Class/Client.h"
-#include "../LInkedList_Class/LinkedList.h" 
 #include "../Transaction_Class/Transaction.h"
+#include "../LInkedList_Class/LinkedList.cpp" 
+#include "../Client_Class/Client.h"
 
 // include most popular lib.
 #include <bits/stdc++.h>
@@ -88,8 +88,7 @@ bool newClient()
     string name, email, phone, address, password;
     Client newClient;
     welcomeText();
-    cout << "++++++++++++++++ Create a new client account ++++++++++++++++";
-    cout << "\nPlease write your name\n>>";       
+    cout << "++++++++++++++++ Create a new client account ++++++++++++++++";    cout << "\nPlease write your name\n>>";       
     cin >> name;        newClient.setClientName(name);   
     cout << "\nPlease write your email\n>>";
     cin >> email;       newClient.setClientEmail(email);  

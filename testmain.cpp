@@ -1,7 +1,7 @@
 #ifndef INCLUDE
 #define INCLUDE
 
-// include classes we Implemeneted
+//include classes we Implemeneted
 #include "lib/Client_Class/Client.h"
 #include "lib/LInkedList_Class/LinkedList.cpp" 
 #include "lib/Transaction_Class/Transaction.h"
