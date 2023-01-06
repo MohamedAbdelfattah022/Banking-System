@@ -2,9 +2,9 @@
 #define INCLUDE
 
 // include classes we Implemeneted
-#include "lib/Client_Class/Client.h"
-#include "lib/LInkedList_Class/LinkedList.h" 
-#include "lib/Transaction_Class/Transaction.h"
+#include "../Client_Class/Client.h"
+#include "../LInkedList_Class/LinkedList.h" 
+#include "../Transaction_Class/Transaction.h"
 
 // include most popular lib.
 #include <bits/stdc++.h>
@@ -16,7 +16,7 @@ using namespace std;
 //Function that print the welcome text every time a choice is made in the main menu
 void welcomeText()
 {
-    cout << "=============================================================\n";
+    cout << "===============================================================\n";
     cout << "++++++++++++++++ Welcome to the banking system ++++++++++++++++\n";
 }
 
