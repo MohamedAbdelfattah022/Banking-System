@@ -27,6 +27,6 @@ bool ClientLinkedList::insert(Client newclient)
         tail->next = new LinkedListNode(newclient);
         tail = tail->next;
     }
-
+    m_size++;
     return 1;
 }
