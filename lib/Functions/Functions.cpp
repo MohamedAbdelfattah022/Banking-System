@@ -6,7 +6,6 @@
 #include "../LInkedList_Class/LinkedList.cpp" 
 #include "../Client_Class/Client.h"
 
-
 // include most popular lib.
 #include <bits/stdc++.h>
 
@@ -17,7 +16,7 @@ using namespace std;
 //Function that print the welcome text every time a choice is made in the main menu
 void welcomeText()
 {
-    cout << "=============================================================\n";
+    cout << "===============================================================\n";
     cout << "++++++++++++++++ Welcome to the banking system ++++++++++++++++\n";
 }
 
@@ -61,7 +60,7 @@ int hashFunction(string s)
         function to do hashing
         1- take string "email"
         2- summation of string
-        and return it '%' size of array to put in it. 
+        and return it with '%' size of array to put in it. 
     */
     int sum = 0;
     for(int i=0; i<(int)s.size(); i++)
@@ -89,8 +88,7 @@ bool newClient()
     string name, email, phone, address, password;
     Client newClient;
     welcomeText();
-    cout << "++++++++++++++++ Create a new client account ++++++++++++++++";
-    cout << "\nPlease write your name\n>>";       
+    cout << "++++++++++++++++ Create a new client account ++++++++++++++++";    cout << "\nPlease write your name\n>>";       
     cin >> name;        newClient.setClientName(name);   
     cout << "\nPlease write your email\n>>";
     cin >> email;       newClient.setClientEmail(email);  
@@ -109,4 +107,14 @@ bool newClient()
     arrayOfClients[indx]->insert(newClient);
     return 1;
 
+}
+
+void clientHome()
+{
+    cout << "++++++++++++++++ Welcome to the home page ++++++++++++++++";
+    cout << "\nCHOOSE ONE OF THE FOLLOWING OPTIONS\n";
+    cout << "1. Transactions menu\n";
+    cout << "2. View personal info\n";
+    cout << "3. Logout\n";
+    cout << "===============================================================\n";
 }
