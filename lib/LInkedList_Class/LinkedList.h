@@ -30,6 +30,8 @@ public:
     bool insert(Client);
 
     bool isExist(string);
+    
+    void printAllElements();
 
     // function to return size of linked list
     int size() {return m_size;}
