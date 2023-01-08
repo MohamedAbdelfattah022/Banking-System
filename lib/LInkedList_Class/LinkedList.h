@@ -21,7 +21,7 @@ class ClientLinkedList
 {
 public:
     // Constructor to set head equal NULL
-    ClientLinkedList()  {head = NULL; tail = NULL;}
+    ClientLinkedList()  {head = NULL; tail = NULL; m_size=0;}
     
     // sort linked list // bonus function
     void sort();
@@ -30,6 +30,8 @@ public:
     bool insert(Client);
 
     bool isExist(string);
+    
+    void printAllElements();
 
     // function to return size of linked list
     int size() {return m_size;}
