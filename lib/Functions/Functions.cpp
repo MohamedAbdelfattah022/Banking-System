@@ -16,7 +16,7 @@ using namespace std;
 // Function that print the welcome text every time a choice is made in the main menu
 void welcomeText()
 {
-    cout << "===============================================================\n";
+    cout << "\n===============================================================\n";
     cout << "++++++++++++++++ Welcome to the banking system ++++++++++++++++\n\n";
 }
 
@@ -30,6 +30,7 @@ void mainMenue()
     cout << "4. Sort clients by linked list size using the Quick Sort Algorithm" << endl;
     cout << "5. Sort each linked list by the id of the clients. (BOUNUS PART)" << endl;
     cout << "6. Exit the program." << endl;
+    cout << "===============================================================\n";
 }
 
 void loginMenue()
@@ -86,28 +87,30 @@ bool newClient()
     Client newClient;
     welcomeText();
     cout << "++++++++++++++++ Create a new client account ++++++++++++++++";
-    cout << "\nPlease write your name\n>>";
-    cin >> name;
-    newClient.setClientName(name);
+
+    cout << "\nPlease write your name\n>>";      
+    cin.ignore();       getline(cin, name);         newClient.setClientName(name);   
+
     cout << "\nPlease write your email\n>>";
-    cin >> email;
-    newClient.setClientEmail(email);
+    cin >> email;       newClient.setClientEmail(email);  
+
     cout << "\nPlease write your phone\n>>";
-    cin >> phone;
-    newClient.setClientPhone(phone);
+    cin >> phone;       newClient.setClientPhone(phone);  
+
     cout << "\nPlease write your password\n>>";
-    cin >> password;
-    newClient.setClientPassword(password);
+    cin.ignore();       getline(cin,password);      newClient.setClientPassword(password);  
+
     cout << "\nPlease write your address\n>>";
     cin >> address;
     newClient.setClientAddress(address);
 
     int indx = hashFunction(email);
 
-    if (arrayOfClients[indx]->isExist(email))
+    if(arrayOfClients[indx].isExist(email))
         return 0;
+    
+    arrayOfClients[indx].insert(newClient);
 
-    arrayOfClients[indx]->insert(newClient);
     return 1;
 }
 
