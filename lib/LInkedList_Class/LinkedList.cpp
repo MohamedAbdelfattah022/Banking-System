@@ -20,13 +20,35 @@ bool ClientLinkedList::insert(Client newclient)
 {
 
     if(head == NULL)
-        head = new LinkedListNode(newclient);
+    {  
+        head = tail =  new LinkedListNode(newclient);
+        m_size++;
+    }
     else
     {
 
         tail->next = new LinkedListNode(newclient);
         tail = tail->next;
+        m_size++;
     }
-
+    m_size++;
     return 1;
+}
+void ClientLinkedList::printAllElements()
+{
+    /*Fucntion to print all clients of the linked list using print_client_info()*/
+    LinkedListNode * curr = head;
+    int count = 1;
+    while (curr)
+    {
+        cout << "Client " << count << "\n";
+        curr->data.print_client_info();
+        cout << "\n";
+        curr = curr->next;
+        count ++;
+    }
+}
+void ClientLinkedList::sort()
+{
+
 }
