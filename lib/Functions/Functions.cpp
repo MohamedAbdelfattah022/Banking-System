@@ -2,7 +2,6 @@
 #define INCLUDE
 
 // include classes we Implemeneted
-#include "../Transaction_Class/Transaction.h"
 #include "../LInkedList_Class/LinkedList.cpp"
 #include "../Client_Class/Client.h"
 
