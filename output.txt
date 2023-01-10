@@ -1,0 +1,101 @@
+
+===============================================================
+++++++++++++++++ Welcome to the banking system ++++++++++++++++
+
+CHOOSE ONE OF THE FOLLOWING OPTIONS
+1. Login to your account
+2. New client?
+3. Forgot your password?
+4. Sort clients by linked list size using the Quick Sort Algorithm
+5. Sort each linked list by the id of the clients. (BOUNUS PART)
+6. Exit the program.
+===============================================================
+>> 
+===============================================================
+++++++++++++++++ Welcome to the banking system ++++++++++++++++
+
+++++++++++++++++ Create a new client account ++++++++++++++++
+Please write your name
+>>
+Please write your email
+>>
+Please write your phone
+>>
+Please write your password
+>>
+Please write your address
+>>
+===============================================================
+++++++++++++++++ Welcome to the banking system ++++++++++++++++
+
+CHOOSE ONE OF THE FOLLOWING OPTIONS
+1. Login to your account
+2. New client?
+3. Forgot your password?
+4. Sort clients by linked list size using the Quick Sort Algorithm
+5. Sort each linked list by the id of the clients. (BOUNUS PART)
+6. Exit the program.
+===============================================================
+>> 
+===============================================================
+++++++++++++++++ Welcome to the banking system ++++++++++++++++
+
+++++++++++++++++ Create a new client account ++++++++++++++++
+Please write your name
+>>
+Please write your email
+>>
+Please write your phone
+>>
+Please write your password
+>>
+Please write your address
+>>
+===============================================================
+++++++++++++++++ Welcome to the banking system ++++++++++++++++
+
+CHOOSE ONE OF THE FOLLOWING OPTIONS
+1. Login to your account
+2. New client?
+3. Forgot your password?
+4. Sort clients by linked list size using the Quick Sort Algorithm
+5. Sort each linked list by the id of the clients. (BOUNUS PART)
+6. Exit the program.
+===============================================================
+>> #0
+#1
+#2
+#3
+#4
+Client 1
+Name: Omar Morshdy
+ID: 41
+Email: o.ayman2149@nu.edu.eg
+Phone: 01009855094
+Address: altgamoo3
+
+#5
+Client 1
+Name: Mohamed Ashraf
+ID: 6334
+Email: M.ashraf2121@nu.edu.eg
+Phone: 01067238971
+Address: Alex
+
+#6
+#7
+#8
+#9
+
+===============================================================
+++++++++++++++++ Welcome to the banking system ++++++++++++++++
+
+CHOOSE ONE OF THE FOLLOWING OPTIONS
+1. Login to your account
+2. New client?
+3. Forgot your password?
+4. Sort clients by linked list size using the Quick Sort Algorithm
+5. Sort each linked list by the id of the clients. (BOUNUS PART)
+6. Exit the program.
+===============================================================
+>> 
