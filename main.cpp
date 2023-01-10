@@ -15,8 +15,8 @@ using namespace std;
 
 int main()
 {
-    // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
 
     // int tc = 1;
     while (true)
@@ -35,7 +35,11 @@ int main()
         }
         else if(option == 3)
         {
-
+            for(int i=0; i<10; i++)
+            {
+                cout << "#" << i << endl;
+                arrayOfClients[i].printAllElements();
+            }
         }
         else if(option == 4)
         {

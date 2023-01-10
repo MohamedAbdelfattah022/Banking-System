@@ -1,6 +1,6 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
-#include "../Client_Class/Client.h"
+#include "../Client_Class/Client.cpp"
 
 
 class LinkedListNode
