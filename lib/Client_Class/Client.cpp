@@ -1,5 +1,124 @@
-#ifndef CLIENT_H
-#define CLIENT_H
 #include"Client.h"
 
-#endif
+Transaction::Transaction()
+{
+    transactionID = 0;
+    transactionName = "";
+    transactionDate = "";
+}
+
+Transaction::Transaction(int id)
+{
+    transactionID = id;
+    transactionName = "Withdraw";
+    transactionDate = "14/Dec/2022";
+}
+
+void Transaction::printTransactionInfo()
+{
+    cout << "Transaction Id: " << getId() << endl;
+    cout << "Transaction Name: " << getName() << endl;
+    cout << "Transaction Date: " << getDate() << endl << endl;
+}
+
+void transactionsMenu()
+{
+    cout << "++++++++++++++++ Welcome to the transaction system ++++++++++++++++\n"
+         << "CHOOSE ONE OF THE FOLLOWING OPTIONS:\n"
+         << "1. Create a new transaction\n"
+         << "2. View your transactions \n"
+         << "3. Delete a transaction by its ID\n"
+         << ">> " << endl;
+}
+
+
+Client::Client()
+{
+    // initialization all string with empty string
+    clientName = clientEmail = clientPhone = clientAddress = clientPassword = "";
+
+    // initialization transactionCount = zero
+    transactionCount = 0;
+
+    // initialization clientID to by random fucntion
+    clientID = rand();
+
+    // initialization Array of clientTransaction = zeros
+    for (int i = 0; i < 5; i++)
+        clientTransaction[i] = {0};
+}
+
+Client::Client(string name, string email, string phone, string password, string address)
+{
+    clientName = name;
+    clientEmail = email;
+    clientPhone = phone;
+    clientAddress = address;
+    clientPassword = password;
+    clientID = rand();
+    transactionCount = 0;
+}
+
+bool Client::setTransaction(int id)
+{
+    if (transactionCount == 5)
+    {
+        cout << "No more transactions are allowed for this client\n";
+        return 0;
+    }
+    else
+    {
+        // push transaction in clientTransaction array and increment transactionCount by 1
+        Transaction newTransaction(id);
+        clientTransaction[transactionCount++] = newTransaction;
+    }
+    return 1;
+}
+
+void Client::getClientTransaction()
+{
+    // funciton to print all client Transactions
+    for (int i = 0; i < transactionCount; i++)
+    {
+        clientTransaction[i].printTransactionInfo();
+        cout << "\n";
+    }
+}
+
+void Client::print_client_info()
+{
+    cout << "Name: " << clientName << endl;
+    cout << "ID: " << clientID << endl;
+    cout << "Email: " << clientEmail << endl;
+    cout << "Phone: " << clientPhone << endl;
+    cout << "Address: " << clientAddress << endl;
+}
+
+void Client::viewTransaction()
+{
+
+    for (int i = 0; i < 5; i++)
+    {
+        if(clientTransaction[i].getId()==0|| clientTransaction[i].getId() == INT_MIN)
+            continue;
+        else
+            clientTransaction[i].printTransactionInfo();
+    }
+}
+
+void Client::deleteTransaction(int id)
+{
+    for (int i = 0; i < 5; i++)
+    {
+        if(transactionCount==0){
+            cout<<"Transaction does not exist\n";
+            break;
+        }
+        if (id == clientTransaction[i].getId())
+        {
+            clientTransaction[i].setId(INT_MIN);
+            transactionCount--;
+            break;
+        }
+    }
+}
