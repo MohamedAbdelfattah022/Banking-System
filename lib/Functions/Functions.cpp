@@ -35,6 +35,16 @@ void mainMenue()
 
 void loginMenue()
 {
+    welcomeText();
+    cout << "+++++++++++++++++ Welcome back dear client ++++++++++++++++++\n";
+    cout << "Please write your email\n>> ";
+    string email;
+    cin >>  email;
+    /*if (search(email)){
+        s
+
+    }*/
+    
     /* 
         Function to login by your account
         1.0 - take from user email
