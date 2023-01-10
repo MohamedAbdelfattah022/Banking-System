@@ -43,7 +43,7 @@ int m_size;
 };
 
 
-//array containing the heads of clients' linked lists
-ClientLinkedList * arrayOfClients[10];
+//array of ClientLinkedList
+ClientLinkedList  arrayOfClients[10];
 
 #endif
