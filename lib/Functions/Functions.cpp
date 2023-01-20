@@ -32,32 +32,16 @@ void mainMenue()
     cout << "===============================================================\n";
 }
 
-void loginMenue()
+void forgetPassword(string email, int pos)
 {
     welcomeText();
-    cout << "+++++++++++++++++ Welcome back dear client ++++++++++++++++++\n";
-    cout << "Please write your email\n>> ";
-    string email;
-    cin >>  email;
-    /*if (search(email)){
-        s
-
-    }*/
+    cout<<"++++++++++++++++++++ Forgetten Password ++++++++++++++++++++\n\n";
+    cout<<"Enter the new password\n>>";
+    string Pass;
+    cin>>Pass;
+    arrayOfClients[pos].isExist(email)->data.setClientEmail(Pass);
     
-    /* 
-        Function to login by your account
-        1.0 - take from user email
-            1.1 - check if your account exist by email
-            1...
 
-        2.0 - if is exist Enter your password
-                2.1 - let's try again
-                2.2 - if write password wrong ask if he/she forgot your password
-                2.3 - function to return to the mainMenue
-                2...
-
-        3... -
-    */
 }
 
 // hash Function
@@ -77,6 +61,46 @@ int hashFunction(string s)
 
     return sum % 10;
 }
+
+bool loginMenue()
+{
+    welcomeText();
+    cout << "+++++++++++++++++ Welcome back dear client ++++++++++++++++++\n";
+    cout << "Please write your email\n>> ";
+    string mail, pass;
+    cin >>  mail;
+    cout << "Please write your password\n>> ";
+    cin >>  pass;
+   
+    int index = hashFunction(mail);
+
+    if(arrayOfClients[index].isExist(mail)->data.getClientEmail() == mail){
+        if(arrayOfClients[index].isExist(mail)->data.getClientPassword() == pass){
+            return 1;
+        }
+        else{
+            cout<<"Wrong Password !!\n";
+            cout<<"Did you forget your password ?\n(1)Yes\n(2)NO\n(3)Back to Main Menu\n>>\n";
+            cout << "===============================================================\n";
+            int x;
+            cin>> x;
+            if(x==1)
+                forgetPassword(mail, index);
+            else if(x == 2)
+                loginMenue();
+            else
+                mainMenue();    
+                
+        }
+    }
+    else{
+        cout<<"This Email is Not Exist !!\n";
+        return 0;
+    }
+    return 1;
+}
+
+
 
 bool newClient()
 {
