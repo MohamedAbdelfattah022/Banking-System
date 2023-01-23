@@ -15,6 +15,8 @@ LinkedListNode* ClientLinkedList::isExist(string email)
     return 0;
 }
 
+
+
 // Function to insert new client in linked list
 bool ClientLinkedList::insert(Client newclient)
 {
