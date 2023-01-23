@@ -29,7 +29,8 @@ public:
     // insert new client
     bool insert(Client);
 
-    bool isExist(string);
+    // Check if the user email is exist 
+    LinkedListNode * isExist(string);
     
     void printAllElements();
 
