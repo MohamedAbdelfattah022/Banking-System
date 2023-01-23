@@ -29,7 +29,7 @@ public:
     // insert new client
     bool insert(Client);
 
-    bool isExist(string);
+    LinkedListNode* isExist(string);
     
     void printAllElements();
 

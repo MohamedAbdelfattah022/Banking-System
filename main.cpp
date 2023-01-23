@@ -27,7 +27,9 @@ int main()
         
         if(option == 1)
         {
+
             loginMenue();
+            
         }
         else if(option == 2)
         {   
@@ -35,19 +37,15 @@ int main()
         }
         else if(option == 3)
         {
-            for(int i=0; i<10; i++)
-            {
-                cout << "#" << i << endl;
-                arrayOfClients[i].printAllElements();
-            }
+            // forget password
         }
         else if(option == 4)
         {
-
+            printSortedArrayOfLinkedLists(arrayOfClients,0,10);
         }
         else if(option == 5)
         {
-
+            // Bonus Part
         }
         else
         {

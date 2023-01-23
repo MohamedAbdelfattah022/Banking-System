@@ -1,14 +1,14 @@
 #include "LinkedList.h"
 
 
-bool ClientLinkedList::isExist(string email)
+LinkedListNode* ClientLinkedList::isExist(string email)
 {
     LinkedListNode* curr = head;
 
     while(curr)
     {
         if(curr->data.getClientEmail() == email)
-            return 1;
+            return curr;
 
         curr = curr->next;
     }
@@ -31,7 +31,7 @@ bool ClientLinkedList::insert(Client newclient)
         tail = tail->next;
         m_size++;
     }
-    m_size++;
+    
     return 1;
 }
 void ClientLinkedList::printAllElements()

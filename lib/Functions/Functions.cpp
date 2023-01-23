@@ -123,7 +123,7 @@ void clientHome()
     cout << "===============================================================\n";
 }
 
-int partitioningFunction(ClientLinkedList *arr[], int left, int right)
+int partitioningFunction(ClientLinkedList arr[], int left, int right)
 {
     /*
     This is a function that divides the given array to two partitions according to the value of the pivot
@@ -131,7 +131,7 @@ int partitioningFunction(ClientLinkedList *arr[], int left, int right)
     than the pivot then it returns the position of the new limit to be called agian recursively in the
     next partitions
     */
-    int pivot = arr[left]->size();
+    int pivot = arr[left].size();
     int greaterThanPivot = left;
     int smallerThanPivot = right;
     do
@@ -142,12 +142,12 @@ int partitioningFunction(ClientLinkedList *arr[], int left, int right)
             greaterThanPivot++;
             if (greaterThanPivot >= right)
                 break;
-        } while (arr[greaterThanPivot]->size() <= pivot);
+        } while (arr[greaterThanPivot].size() <= pivot);
         // Search for elements less than pivot
         do
         {
             smallerThanPivot--;
-        } while (arr[smallerThanPivot]->size() > pivot);
+        } while (arr[smallerThanPivot].size() > pivot);
         // move elements greater than pivot to the right and elements less than pivot to the left
         if (greaterThanPivot < smallerThanPivot)
             swap(arr[smallerThanPivot], arr[greaterThanPivot]);
@@ -160,7 +160,7 @@ int partitioningFunction(ClientLinkedList *arr[], int left, int right)
     return smallerThanPivot;
 }
 
-void sortArrayOfLinkedLists(ClientLinkedList *arr[], int left, int right)
+void sortArrayOfLinkedLists(ClientLinkedList arr[], int left, int right)
 {
     /*
     This function applies quick sort algorithm to sort the array of linked lists ascendingly
@@ -176,7 +176,7 @@ void sortArrayOfLinkedLists(ClientLinkedList *arr[], int left, int right)
     }
 }
 
-void printSortedArrayOfLinkedLists(ClientLinkedList *arr[], int left, int right)
+void printSortedArrayOfLinkedLists(ClientLinkedList arr[], int left, int right)
 {
     /*Function to sort and print the array of linked lists ascendingly according to their size
         This function uses sortArrayOfLinkedLists to sort the array and prints the content of the array
@@ -186,9 +186,9 @@ void printSortedArrayOfLinkedLists(ClientLinkedList *arr[], int left, int right)
     sortArrayOfLinkedLists(arr, left, right);
     for (int i = 0; i < right; ++i)
     {
-        cout << "Index #" << i + 1 << ": Linked list of " << arr[i]->size() << " Clients\n";
+        cout << "Index #" << i + 1 << ": Linked list of " << arr[i].size() << " Clients\n";
         cout << "Clients of index #" << i + 1 << ":\n\n";
-        arr[i]->printAllElements();
+        arr[i].printAllElements();
     }
 }
 
