@@ -106,6 +106,25 @@ void Client::viewTransaction()
     }
 }
 
+void Client::reorder_Transaction()
+{
+    int flag = 0, j =0;
+    for(int i=0; i<transactionCount; i++)
+    {
+        if(clientTransaction[i].getId() == INT_MIN)
+        {
+            flag = 1;
+            j = i+1;
+        }
+        if(flag)
+        {
+            clientTransaction[i] = clientTransaction[j++];
+        }
+    }
+    if(flag)
+        clientTransaction[--j].setId(INT_MIN);
+}
+
 void Client::deleteTransaction(int id)
 {
     for (int i = 0; i < 5; i++)
@@ -118,7 +137,9 @@ void Client::deleteTransaction(int id)
         {
             clientTransaction[i].setId(INT_MIN);
             transactionCount--;
+            reorder_Transaction();
             break;
         }
+            
     }
 }

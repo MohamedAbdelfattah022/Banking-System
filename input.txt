@@ -52,17 +52,9 @@ a.kamal2192@nu.edu.eg
 01067238971
 1234
 Zayed
-2
-Ahmed kamal
+1
 a.kamal2192@nu.edu.eg
-01067238971
 1234
-Zayed
-2
-Ahmed kamal
-a.kamal2192@nu.edu.eg
-01067238971
-1234
-Zayed
+3
 4
 6

@@ -32,17 +32,6 @@ void mainMenue()
     cout << "===============================================================\n";
 }
 
-void forgetPassword(string email, int pos)
-{
-    welcomeText();
-    cout<<"++++++++++++++++++++ Forgetten Password ++++++++++++++++++++\n\n";
-    cout<<"Enter the new password\n>>";
-    string Pass;
-    cin>>Pass;
-    arrayOfClients[pos].isExist(email)->data.setClientEmail(Pass);
-    
-
-}
 
 // hash Function
 int hashFunction(string s)
@@ -62,42 +51,51 @@ int hashFunction(string s)
     return sum % 10;
 }
 
-bool loginMenue()
+void forgetPassword(string email)
+{
+    welcomeText();
+    cout<<"++++++++++++++++++++ Forgetten Password ++++++++++++++++++++\n\n";
+    int indx = hashFunction(email);
+    LinkedListNode* curr = arrayOfClients[indx].isExist(email);
+    if(curr)
+    {
+        cout<<"Related password is " << curr->data.getClientPassword() << "\n";
+    }
+    else
+    {
+        cout << "Email does not exist" << "\n";
+    }
+}
+
+LinkedListNode* loginMenue()
 {
     welcomeText();
     cout << "+++++++++++++++++ Welcome back dear client ++++++++++++++++++\n";
     cout << "Please write your email\n>> ";
     string mail, pass;
     cin >>  mail;
-    cout << "Please write your password\n>> ";
+    cout << "\nPlease write your password\n>> ";
     cin >>  pass;
    
     int index = hashFunction(mail);
 
-    if(arrayOfClients[index].isExist(mail)->data.getClientEmail() == mail){
+    LinkedListNode* curr = arrayOfClients[index].isExist(mail);
+    
+    if(curr != NULL && curr->data.getClientEmail() == mail){
         if(arrayOfClients[index].isExist(mail)->data.getClientPassword() == pass){
-            return 1;
+            return curr;
         }
-        else{
-            cout<<"Wrong Password !!\n";
-            cout<<"Did you forget your password ?\n(1)Yes\n(2)NO\n(3)Back to Main Menu\n>>\n";
-            cout << "===============================================================\n";
-            int x;
-            cin>> x;
-            if(x==1)
-                forgetPassword(mail, index);
-            else if(x == 2)
-                loginMenue();
-            else
-                mainMenue();    
-                
+        else
+        {
+            cout<<"\nWrong Password !!\n";            
+            return 0;
         }
     }
     else{
-        cout<<"This Email is Not Exist !!\n";
+        cout<<"\nThis email does not exist!!\n";
         return 0;
     }
-    return 1;
+    return curr;
 }
 
 

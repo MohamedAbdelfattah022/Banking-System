@@ -15,8 +15,8 @@ using namespace std;
 
 int main()
 {
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
+    // freopen("input2.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
 
     // int tc = 1;
     while (true)
@@ -27,8 +27,52 @@ int main()
         
         if(option == 1)
         {
+            LinkedListNode* client = loginMenue();
+            while(client)
+            {
 
-            loginMenue();
+                clientHome();
+                int choice;
+                cin >> choice;
+
+                if(choice == 1)
+                {
+                    transactionsMenu();
+                    int akhtar;
+                    cin >> akhtar;
+                    if(akhtar == 1)
+                    {
+                        int id;
+                        cout << "Enter transaction id ";
+                        cin >> id;
+                        client->data.setTransaction(id);
+                    }
+                    else if(akhtar == 2)
+                    {
+                        client->data.viewTransaction();
+                    }
+                    else if(akhtar == 3)
+                    {
+                        int id;
+                        cout << "Enter transaction id ";
+                        cin >> id;
+                        client->data.deleteTransaction(id);
+                    }
+                    else
+                    {
+                        cout << "Invalid choice" << "\n";
+                    }            
+
+                }
+                else if(choice == 2)
+                {
+                    client->data.print_client_info();
+                }
+                else
+                {
+                    break;
+                }
+            }
             
         }
         else if(option == 2)
@@ -38,6 +82,10 @@ int main()
         else if(option == 3)
         {
             // forget password
+            string em;
+            cout << "Enter you mail \n>> ";
+            cin >> em;
+            forgetPassword(em);
         }
         else if(option == 4)
         {

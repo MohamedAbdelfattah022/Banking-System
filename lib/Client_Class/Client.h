@@ -44,6 +44,8 @@ private:
     // <Transaction array>
     Transaction clientTransaction[5];
 
+    void reorder_Transaction();
+
 public:
     // Empty Constructor to initialize All with zeros and empty strings
     Client();
