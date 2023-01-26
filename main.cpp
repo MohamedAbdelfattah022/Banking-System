@@ -23,7 +23,7 @@ int main()
     {
         welcomeText();   
         mainMenue();
-        int option;   cout << ">> ";  cin >> option;
+        int option; fflush(stdin);   cout << ">> ";  cin >> option;
         
         if(option == 1)
         {
