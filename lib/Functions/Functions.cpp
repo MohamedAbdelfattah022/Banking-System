@@ -119,19 +119,19 @@ bool newClient()
     welcomeText();
     cout << "++++++++++++++++ Create a new client account ++++++++++++++++";
 
-    cout << "\nPlease write your name\n>>";      
+    cout << "\nPlease write your name\n>> ";      
     cin.ignore();       getline(cin, name);         newClient.setClientName(name);   
 
-    cout << "\nPlease write your email\n>>";
+    cout << "\nPlease write your email\n>> ";
     cin >> email;       newClient.setClientEmail(email);  
 
-    cout << "\nPlease write your phone\n>>";
+    cout << "\nPlease write your phone\n>> ";
     cin >> phone;       newClient.setClientPhone(phone);  
 
-    cout << "\nPlease write your password\n>>";
+    cout << "\nPlease write your password\n>> ";
     cin.ignore();       getline(cin,password);      newClient.setClientPassword(password);  
 
-    cout << "\nPlease write your address\n>>";
+    cout << "\nPlease write your address\n>> ";
     cin >> address;
     newClient.setClientAddress(address);
 

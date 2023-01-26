@@ -28,7 +28,8 @@ void transactionsMenu()
          << "1. Create a new transaction\n"
          << "2. View your transactions \n"
          << "3. Delete a transaction by its ID\n"
-         << ">> " << endl;
+         << ">> ";
+        
 }
 
 
