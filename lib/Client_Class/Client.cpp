@@ -2,7 +2,7 @@
 
 Transaction::Transaction()
 {
-    transactionID = 0;
+    transactionID = INT_MIN;
     transactionName = "";
     transactionDate = "";
 }
@@ -43,9 +43,9 @@ Client::Client()
     // initialization clientID to by random fucntion
     clientID = rand();
 
-    // initialization Array of clientTransaction = zeros
+    // initialization Array of clientTransaction = INT_MIN
     for (int i = 0; i < 5; i++)
-        clientTransaction[i] = {0};
+        clientTransaction[i] = {INT_MIN};
 }
 
 Client::Client(string name, string email, string phone, string password, string address)
@@ -96,13 +96,16 @@ void Client::print_client_info()
 
 void Client::viewTransaction()
 {
-
-    for (int i = 0; i < 5; i++)
-    {
-        if(clientTransaction[i].getId()==0|| clientTransaction[i].getId() == INT_MIN)
-            continue;
-        else
-            clientTransaction[i].printTransactionInfo();
+    if(transactionCount == 0)
+       cout<<"No Transactions Available\n";
+    else {
+        for (int i = 0; i < 5; i++)
+        {
+            if(clientTransaction[i].getId() == INT_MIN)
+                continue;
+            else
+                clientTransaction[i].printTransactionInfo();
+        }
     }
 }
 
@@ -127,6 +130,7 @@ void Client::reorder_Transaction()
 
 void Client::deleteTransaction(int id)
 {
+    bool flag = 0;
     for (int i = 0; i < 5; i++)
     {
         if(transactionCount==0){
@@ -138,8 +142,9 @@ void Client::deleteTransaction(int id)
             clientTransaction[i].setId(INT_MIN);
             transactionCount--;
             reorder_Transaction();
+            flag=1;
             break;
-        }
-            
+        }        
     }
+    if(flag==0) cout<<"Transaction does not exist\n";
 }

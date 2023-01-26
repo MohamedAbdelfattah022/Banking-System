@@ -84,6 +84,7 @@ public:
 
     void viewTransaction();
 
+
     void deleteTransaction(int id);
 };
 

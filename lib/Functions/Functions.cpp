@@ -138,7 +138,10 @@ bool newClient()
     int indx = hashFunction(email);
 
     if(arrayOfClients[indx].isExist(email))
-        return 0;
+    {       
+            cout<<"\nThis Email already used\n";
+            return 0;
+    }
     
     arrayOfClients[indx].insert(newClient);
 
@@ -208,25 +211,25 @@ void sortArrayOfLinkedLists(ClientLinkedList arr[], int left, int right)
     }
 }
 
-void printSortedArrayOfLinkedLists(ClientLinkedList arr[], int left, int right)
-{
-    /*Function to sort and print the array of linked lists ascendingly according to their size
-        This function uses sortArrayOfLinkedLists to sort the array and prints the content of the array
-            using a for loop that calls printAllElements() on each linked list*/
-    welcomeText();
-    cout << "After sorting the array of linked lists, we have the following info\n";
-    sortArrayOfLinkedLists(arr, left, right);
-    for (int i = 0; i < right; ++i)
-    {
-        cout << "Index #" << i + 1 << ": Linked list of " << arr[i].size() << " Clients\n";
-        cout << "Clients of index #" << i + 1 << ":\n\n";
-        arr[i].printAllElements();
-    }
-}
+// void printSortedArrayOfLinkedLists(ClientLinkedList arr[], int left, int right)
+// {
+//     /*Function to sort and print the array of linked lists ascendingly according to their size
+//         This function uses sortArrayOfLinkedLists to sort the array and prints the content of the array
+//             using a for loop that calls printAllElements() on each linked list*/
+//     welcomeText();
+//     cout << "After sorting the array of linked lists, we have the following info\n";
+//     sortArrayOfLinkedLists(arr, left, right);
+//     for (int i = 0; i < right; ++i)
+//     {
+//         cout << "Index #" << i + 1 << ": Linked list of " << arr[i].size() << " Clients\n";
+//         cout << "Clients of index #" << i + 1 << ":\n\n";
+//         arr[i].printAllElements();
+//     }
+// }
 
-void swap(int *i, int *j)
+void swap(ClientLinkedList arr, ClientLinkedList arr2)
 {
-    int *tmp = i;
-    *i = *j;
-    *j = *tmp;
+    ClientLinkedList tmp = arr;
+    arr = arr2;
+    arr2=tmp;
 }
