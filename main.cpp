@@ -40,10 +40,11 @@ int main()
                     transactionsMenu();
                     int akhtar;
                     cin >> akhtar;
+
                     if(akhtar == 1)
                     {
                         int id;
-                        cout << "Enter transaction id ";
+                        cout << "Enter transaction ID\n>> ";
                         cin >> id;
                         client->data.setTransaction(id);
                     }
@@ -54,7 +55,7 @@ int main()
                     else if(akhtar == 3)
                     {
                         int id;
-                        cout << "Enter transaction id ";
+                        cout << "Enter transaction ID\n>> ";
                         cin >> id;
                         client->data.deleteTransaction(id);
                     }
