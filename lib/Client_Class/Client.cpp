@@ -1,5 +1,6 @@
 #include"Client.h"
 
+
 Transaction::Transaction()
 {
     transactionID = INT_MIN;
@@ -23,11 +24,12 @@ void Transaction::printTransactionInfo()
 
 void transactionsMenu()
 {
-    cout << "++++++++++++++++ Welcome to the transaction system ++++++++++++++++\n"
+    cout << "++++++++++++++ Welcome to the transactions system +++++++++++++\n"
          << "CHOOSE ONE OF THE FOLLOWING OPTIONS:\n"
          << "1. Create a new transaction\n"
          << "2. View your transactions \n"
          << "3. Delete a transaction by its ID\n"
+         << "===============================================================\n"
          << ">> ";
         
 }
@@ -97,6 +99,11 @@ void Client::print_client_info()
 
 void Client::viewTransaction()
 {
+    // welcomeText();
+    cout << "\n===============================================================\n";
+    cout << "++++++++++++++++ Welcome to the banking system ++++++++++++++++\n\n";
+
+    cout << "++++++++++++++++++++ Transactions informations ++++++++++++++++++++\n";
     if(transactionCount == 0)
        cout<<"No Transactions Available\n";
     else {
@@ -135,7 +142,7 @@ void Client::deleteTransaction(int id)
     for (int i = 0; i < 5; i++)
     {
         if(transactionCount==0){
-            cout<<"Transaction does not exist\n";
+            cout<<"Transaction does not exist !!\n";
             break;
         }
         if (id == clientTransaction[i].getId())
@@ -147,5 +154,5 @@ void Client::deleteTransaction(int id)
             break;
         }        
     }
-    if(flag==0) cout<<"Transaction does not exist\n";
+    if(flag==0) cout<<"Transaction does not exist !!\n";
 }

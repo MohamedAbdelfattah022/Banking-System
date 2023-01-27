@@ -43,7 +43,7 @@ void ClientLinkedList::printAllElements()
     int count = 1;
     while (curr)
     {
-        cout << "Client " << count << "\n";
+            cout << "+++++++++++++++++++++ Client "<< count << " Information ++++++++++++++++++++++\n";
         curr->data.print_client_info();
         cout << "\n";
         curr = curr->next;
