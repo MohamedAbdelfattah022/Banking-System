@@ -53,8 +53,7 @@ int hashFunction(string s)
 
 void forgetPassword(string email)
 {
-    welcomeText();
-    cout<<"++++++++++++++++++++ Forgetten Password ++++++++++++++++++++\n\n";
+    cout<<"---------------------------------------------------------------\n";
     int indx = hashFunction(email);
     LinkedListNode* curr = arrayOfClients[indx].isExist(email);
     if(curr)
@@ -70,7 +69,7 @@ void forgetPassword(string email)
 LinkedListNode* loginMenue()
 {
     welcomeText();
-    cout << "+++++++++++++++++ Welcome back dear client ++++++++++++++++++\n";
+    cout << "++++++++++++++++++ Welcome back dear client +++++++++++++++++++\n";
     cout << "Please write your email\n>> ";
     string mail, pass;
     cin >>  mail;
@@ -117,7 +116,7 @@ bool newClient()
     string name, email, phone, address, password;
     Client newClient;
     welcomeText();
-    cout << "++++++++++++++++ Create a new client account ++++++++++++++++";
+    cout << "+++++++++++++++++ Create a new client account +++++++++++++++++";
 
     cout << "\nPlease write your name\n>> ";      
     cin.ignore();       getline(cin, name);         newClient.setClientName(name);   
@@ -150,12 +149,13 @@ bool newClient()
 
 void clientHome()
 {
-    cout << "++++++++++++++++ Welcome to the home page ++++++++++++++++";
+    welcomeText();
+    cout << "++++++++++++++++++ Welcome to the home page +++++++++++++++++++";
     cout << "\nCHOOSE ONE OF THE FOLLOWING OPTIONS\n";
     cout << "1. Transactions menu\n";
     cout << "2. View personal info\n";
     cout << "3. Logout\n";
-    cout << "===============================================================\n";
+    cout << "===============================================================\n>>\n";
 }
 
 int partitioningFunction(ClientLinkedList arr[], int left, int right)
