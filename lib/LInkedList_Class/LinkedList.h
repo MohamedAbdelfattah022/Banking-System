@@ -19,12 +19,16 @@ public:
 
 class ClientLinkedList
 {
+private:
+    // sort linked list // bonus function
+    LinkedListNode* sortedMerge(LinkedListNode*, LinkedListNode*);
+    void frontBackSplit(LinkedListNode**, LinkedListNode**);
 public:
     // Constructor to set head equal NULL
     ClientLinkedList()  {head = NULL; tail = NULL; m_size=0;}
     
     // sort linked list // bonus function
-    void sort();
+    void mergeSort();
 
     // insert new client
     bool insert(Client);
