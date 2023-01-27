@@ -211,21 +211,22 @@ void sortArrayOfLinkedLists(ClientLinkedList arr[], int left, int right)
     }
 }
 
-// void printSortedArrayOfLinkedLists(ClientLinkedList arr[], int left, int right)
-// {
-//     /*Function to sort and print the array of linked lists ascendingly according to their size
-//         This function uses sortArrayOfLinkedLists to sort the array and prints the content of the array
-//             using a for loop that calls printAllElements() on each linked list*/
-//     welcomeText();
-//     cout << "After sorting the array of linked lists, we have the following info\n";
-//     sortArrayOfLinkedLists(arr, left, right);
-//     for (int i = 0; i < right; ++i)
-//     {
-//         cout << "Index #" << i + 1 << ": Linked list of " << arr[i].size() << " Clients\n";
-//         cout << "Clients of index #" << i + 1 << ":\n\n";
-//         arr[i].printAllElements();
-//     }
-// }
+/* void printSortedArrayOfLinkedLists(ClientLinkedList arr[], int left, int right)
+{
+    //  Function to sort and print the array of linked lists ascendingly according to their size
+    //      This function uses sortArrayOfLinkedLists to sort the array and prints the content of the array
+    //          using a for loop that calls printAllElements() on each linked list
+    welcomeText();
+    cout << "After sorting the array of linked lists, we have the following info\n";
+    sortArrayOfLinkedLists(arr, left, right);
+    for (int i = 0; i < right; ++i)
+    {
+        cout << "Index #" << i + 1 << ": Linked list of " << arr[i].size() << " Clients\n";
+        cout << "Clients of index #" << i + 1 << ":\n\n";
+        arr[i].printAllElements();
+    }
+}
+*/
 
 void swap(ClientLinkedList arr, ClientLinkedList arr2)
 {
