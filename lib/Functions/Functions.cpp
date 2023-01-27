@@ -12,6 +12,7 @@ using namespace std;
 
 #endif
 
+
 // Function that print the welcome text every time a choice is made in the main menu
 void welcomeText()
 {
@@ -27,7 +28,7 @@ void mainMenue()
     cout << "2. New client?" << endl;
     cout << "3. Forgot your password?" << endl;
     cout << "4. Sort clients by linked list size using the Quick Sort Algorithm" << endl;
-    cout << "5. Sort each linked list by the id of the clients. (BOUNUS PART)" << endl;
+    cout << "5. Sort each linked list by the id of the clients. (BONUS PART)" << endl;
     cout << "6. Exit the program." << endl;
     cout << "===============================================================\n";
 }
@@ -155,7 +156,7 @@ void clientHome()
     cout << "1. Transactions menu\n";
     cout << "2. View personal info\n";
     cout << "3. Logout\n";
-    cout << "===============================================================\n>>\n";
+    cout << "===============================================================\n>>";
 }
 
 int partitioningFunction(ClientLinkedList arr[], int left, int right)

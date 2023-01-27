@@ -46,10 +46,7 @@ int m_size;
 
 };
 
-
-//array of ClientLinkedList
-ClientLinkedList  arrayOfClients[10];
-ClientLinkedList  sortedArrayOfClients[10];
-
-
+    ClientLinkedList  arrayOfClients[10];
+    ClientLinkedList copyArrayOfLinkedLists[10];
+    
 #endif

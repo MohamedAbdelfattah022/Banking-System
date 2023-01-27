@@ -19,6 +19,7 @@ int main()
     // freopen("output.txt", "w", stdout);
 
     // int tc = 1;
+    
     while (true)
     {
         welcomeText();   
@@ -86,6 +87,7 @@ int main()
         else if(option == 2)
         {   
             newClient();
+            copy (arrayOfClients, arrayOfClients+10, copyArrayOfLinkedLists);
         }
         else if(option == 3)
         {
@@ -100,35 +102,34 @@ int main()
         else if(option == 4)
         {
             welcomeText();
-            ClientLinkedList sortedArrayOfLinkedLists[10];
-            copy (arrayOfClients, arrayOfClients+10, sortedArrayOfLinkedLists);
-            (sortedArrayOfLinkedLists, 0, 10);
+            
+            //(sortedArrayOfLinkedLists, 0, 10);
+            
+            sortArrayOfLinkedLists(copyArrayOfLinkedLists, 0, 10);
             cout << "+++++++++++++ Sorted array of clients linked lists ++++++++++++\n\n";
             cout << "After sorting the array of linked lists, we have the following info:\n";
             for (int i = 0; i < 10; ++i)
             {
-                cout << "Index #" << i + 1 << ": Linked list of " << sortedArrayOfLinkedLists[i].size() << " Clients\n";
+                cout << "Index #" << i + 1 << ": Linked list of " << copyArrayOfLinkedLists[i].size() << " Clients\n";
                 cout << "Clients of index #" << i + 1 << ":\n\n";
-                sortedArrayOfLinkedLists[i].printAllElements();
+                copyArrayOfLinkedLists[i].printAllElements();
             }
         }
         else if(option == 5)
         {
             // Bonus Part
-            ClientLinkedList sortedArrayOfLinkedLists[10];
-            copy (arrayOfClients, arrayOfClients+10, sortedArrayOfLinkedLists);
             for(int i=0; i<10; i++)
             {
                 
-                sortedArrayOfLinkedLists[i].mergeSort();
+                arrayOfClients[i].mergeSort();
             }
             cout << "++++++++++++++ Sorted array of clients Merge Sort +++++++++++++\n\n";
             cout << "After sorting Client linked lists of each index:\n";
             for (int i = 0; i < 10; ++i)
             {
-                cout << "Index #" << i + 1 << ": Linked list of " << sortedArrayOfLinkedLists[i].size() << " Clients\n";
+                cout << "Index #" << i + 1 << ": Linked list of " << arrayOfClients[i].size() << " Clients\n";
                 cout << "Clients of index #" << i + 1 << ":\n\n";
-                sortedArrayOfLinkedLists[i].printAllElements();
+                arrayOfClients[i].printAllElements();
             }
         }
         else
