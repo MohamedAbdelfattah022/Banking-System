@@ -90,18 +90,26 @@ int main()
         }
         else if(option == 4)
         {
-            printSortedArrayOfLinkedLists(arrayOfClients,0,10);
+            welcomeText();
+            sortArrayOfLinkedLists(arrayOfClients, 0, 10);
+            cout << "After sorting the array of linked lists, we have the following info\n";
+            for (int i = 0; i < 10; ++i)
+            {
+                cout << "Index #" << i + 1 << ": Linked list of " << arrayOfClients[i].size() << " Clients\n";
+                cout << "Clients of index #" << i + 1 << ":\n\n";
+                arrayOfClients[i].printAllElements();
+            }
         }
         else if(option == 5)
         {
             // Bonus Part
         }
-        else
+        else if(option ==6)
         {
             break;
         }
     }
-
+    
     return 0;
    
 }
