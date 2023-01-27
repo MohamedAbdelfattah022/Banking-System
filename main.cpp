@@ -15,15 +15,17 @@ using namespace std;
 
 int main()
 {
-    // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
 
     // int tc = 1;
     while (true)
     {
         welcomeText();   
         mainMenue();
-        int option; fflush(stdin);   cout << ">> ";  cin >> option;
+        int option;
+        //  fflush(stdin);
+        cout << ">> ";  cin >> option;
         
         if(option == 1)
         {
@@ -103,13 +105,24 @@ int main()
         else if(option == 5)
         {
             // Bonus Part
+            for(int i=0; i<10; i++)
+            {
+                arrayOfClients[i].mergeSort();
+            }
+            cout << "After sorting Client linked lists of each index:\n";
+            for (int i = 0; i < 10; ++i)
+            {
+                cout << "Index #" << i + 1 << ": Linked list of " << arrayOfClients[i].size() << " Clients\n";
+                cout << "Clients of index #" << i + 1 << ":\n\n";
+                arrayOfClients[i].printAllElements();
+            }
         }
         else
         {
             break;
         }
     }
-    
+
     return 0;
    
 }
