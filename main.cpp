@@ -104,7 +104,7 @@ int main()
         {
             // Bonus Part
         }
-        else if(option ==6)
+        else
         {
             break;
         }
