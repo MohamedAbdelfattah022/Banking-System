@@ -16,15 +16,15 @@ CHOOSE ONE OF THE FOLLOWING OPTIONS
 
 ++++++++++++++++ Create a new client account ++++++++++++++++
 Please write your name
->>
+>> 
 Please write your email
->>
+>> 
 Please write your phone
->>
+>> 
 Please write your password
->>
+>> 
 Please write your address
->>
+>> 
 ===============================================================
 ++++++++++++++++ Welcome to the banking system ++++++++++++++++
 
@@ -42,15 +42,15 @@ CHOOSE ONE OF THE FOLLOWING OPTIONS
 
 ++++++++++++++++ Create a new client account ++++++++++++++++
 Please write your name
->>
+>> 
 Please write your email
->>
+>> 
 Please write your phone
->>
+>> 
 Please write your password
->>
+>> 
 Please write your address
->>
+>> 
 ===============================================================
 ++++++++++++++++ Welcome to the banking system ++++++++++++++++
 
@@ -68,15 +68,15 @@ CHOOSE ONE OF THE FOLLOWING OPTIONS
 
 ++++++++++++++++ Create a new client account ++++++++++++++++
 Please write your name
->>
+>> 
 Please write your email
->>
+>> 
 Please write your phone
->>
+>> 
 Please write your password
->>
+>> 
 Please write your address
->>
+>> 
 ===============================================================
 ++++++++++++++++ Welcome to the banking system ++++++++++++++++
 
@@ -94,15 +94,15 @@ CHOOSE ONE OF THE FOLLOWING OPTIONS
 
 ++++++++++++++++ Create a new client account ++++++++++++++++
 Please write your name
->>
+>> 
 Please write your email
->>
+>> 
 Please write your phone
->>
+>> 
 Please write your password
->>
+>> 
 Please write your address
->>
+>> 
 ===============================================================
 ++++++++++++++++ Welcome to the banking system ++++++++++++++++
 
@@ -120,15 +120,15 @@ CHOOSE ONE OF THE FOLLOWING OPTIONS
 
 ++++++++++++++++ Create a new client account ++++++++++++++++
 Please write your name
->>
+>> 
 Please write your email
->>
+>> 
 Please write your phone
->>
+>> 
 Please write your password
->>
+>> 
 Please write your address
->>
+>> 
 ===============================================================
 ++++++++++++++++ Welcome to the banking system ++++++++++++++++
 
@@ -146,15 +146,15 @@ CHOOSE ONE OF THE FOLLOWING OPTIONS
 
 ++++++++++++++++ Create a new client account ++++++++++++++++
 Please write your name
->>
+>> 
 Please write your email
->>
+>> 
 Please write your phone
->>
+>> 
 Please write your password
->>
+>> 
 Please write your address
->>
+>> 
 ===============================================================
 ++++++++++++++++ Welcome to the banking system ++++++++++++++++
 
@@ -172,15 +172,15 @@ CHOOSE ONE OF THE FOLLOWING OPTIONS
 
 ++++++++++++++++ Create a new client account ++++++++++++++++
 Please write your name
->>
+>> 
 Please write your email
->>
+>> 
 Please write your phone
->>
+>> 
 Please write your password
->>
+>> 
 Please write your address
->>
+>> 
 ===============================================================
 ++++++++++++++++ Welcome to the banking system ++++++++++++++++
 
@@ -198,15 +198,15 @@ CHOOSE ONE OF THE FOLLOWING OPTIONS
 
 ++++++++++++++++ Create a new client account ++++++++++++++++
 Please write your name
->>
+>> 
 Please write your email
->>
+>> 
 Please write your phone
->>
+>> 
 Please write your password
->>
+>> 
 Please write your address
->>
+>> 
 ===============================================================
 ++++++++++++++++ Welcome to the banking system ++++++++++++++++
 
@@ -224,15 +224,15 @@ CHOOSE ONE OF THE FOLLOWING OPTIONS
 
 ++++++++++++++++ Create a new client account ++++++++++++++++
 Please write your name
->>
+>> 
 Please write your email
->>
+>> 
 Please write your phone
->>
+>> 
 Please write your password
->>
+>> 
 Please write your address
->>
+>> 
 ===============================================================
 ++++++++++++++++ Welcome to the banking system ++++++++++++++++
 
@@ -244,20 +244,100 @@ CHOOSE ONE OF THE FOLLOWING OPTIONS
 5. Sort each linked list by the id of the clients. (BOUNUS PART)
 6. Exit the program.
 ===============================================================
->> 
-===============================================================
-++++++++++++++++ Welcome to the banking system ++++++++++++++++
+>> After sorting Client linked lists of each index:
+Index #1: Linked list of 1 Clients
+Clients of index #1:
 
-+++++++++++++++++ Welcome back dear client ++++++++++++++++++
-Please write your email
->> 
-Please write your password
->> ++++++++++++++++ Welcome to the home page ++++++++++++++++
-CHOOSE ONE OF THE FOLLOWING OPTIONS
-1. Transactions menu
-2. View personal info
-3. Logout
-===============================================================
+Client 1
+Name: Ali Morshdy
+ID: 41
+Email: a.ayman2149@nu.edu.eg
+Phone: 01009855094
+Address: altgamoo3
+
+Index #2: Linked list of 0 Clients
+Clients of index #2:
+
+Index #3: Linked list of 2 Clients
+Clients of index #3:
+
+Client 1
+Name: Ahmed kamal
+ID: 2995
+Email: a.kamal2192@nu.edu.eg
+Phone: 01067238971
+Address: Zayed
+
+Client 2
+Name: Mohamed Salama
+ID: 19169
+Email: m.salama2212@nu.edu.eg
+Phone: 01009855094
+Address: altgamoo3
+
+Index #4: Linked list of 1 Clients
+Clients of index #4:
+
+Client 1
+Name: Ali kamal
+ID: 9961
+Email: a.kamal2102@nu.edu.eg
+Phone: 01067238971
+Address: Alex
+
+Index #5: Linked list of 0 Clients
+Clients of index #5:
+
+Index #6: Linked list of 2 Clients
+Clients of index #6:
+
+Client 1
+Name: Mahmoud Ali
+ID: 11478
+Email: m.ali2290@nu.edu.eg
+Phone: 01009855094
+Address: altgamoo3
+
+Client 2
+Name: Mahmoud Kamal
+ID: 23281
+Email: m.kamal2102@nu.edu.eg
+Phone: 01067238971
+Address: Alex
+
+Index #7: Linked list of 0 Clients
+Clients of index #7:
+
+Index #8: Linked list of 2 Clients
+Clients of index #8:
+
+Client 1
+Name: Hany Morshdy
+ID: 6334
+Email: h.ayman2149@nu.edu.eg
+Phone: 01009855094
+Address: altgamoo3
+
+Client 2
+Name: Mohamed Ashraf
+ID: 26962
+Email: m.ashraf2121@nu.edu.eg
+Phone: 01067238971
+Address: Alex
+
+Index #9: Linked list of 0 Clients
+Clients of index #9:
+
+Index #10: Linked list of 1 Clients
+Clients of index #10:
+
+Client 1
+Name: Omar Ashraf
+ID: 5705
+Email: o.ashraf2121@nu.edu.eg
+Phone: 01067238971
+Address: Alex
+
 
 ===============================================================
 ++++++++++++++++ Welcome to the banking system ++++++++++++++++
@@ -338,18 +418,124 @@ Index #9: Linked list of 2 Clients
 Clients of index #9:
 
 Client 1
+Name: Ahmed kamal
+ID: 2995
+Email: a.kamal2192@nu.edu.eg
+Phone: 01067238971
+Address: Zayed
+
+Client 2
 Name: Mohamed Salama
 ID: 19169
 Email: m.salama2212@nu.edu.eg
 Phone: 01009855094
 Address: altgamoo3
 
+Index #10: Linked list of 2 Clients
+Clients of index #10:
+
+Client 1
+Name: Hany Morshdy
+ID: 6334
+Email: h.ayman2149@nu.edu.eg
+Phone: 01009855094
+Address: altgamoo3
+
 Client 2
+Name: Mohamed Ashraf
+ID: 26962
+Email: m.ashraf2121@nu.edu.eg
+Phone: 01067238971
+Address: Alex
+
+
+===============================================================
+++++++++++++++++ Welcome to the banking system ++++++++++++++++
+
+CHOOSE ONE OF THE FOLLOWING OPTIONS
+1. Login to your account
+2. New client?
+3. Forgot your password?
+4. Sort clients by linked list size using the Quick Sort Algorithm
+5. Sort each linked list by the id of the clients. (BOUNUS PART)
+6. Exit the program.
+===============================================================
+>> After sorting Client linked lists of each index:
+Index #1: Linked list of 0 Clients
+Clients of index #1:
+
+Index #2: Linked list of 0 Clients
+Clients of index #2:
+
+Index #3: Linked list of 0 Clients
+Clients of index #3:
+
+Index #4: Linked list of 0 Clients
+Clients of index #4:
+
+Index #5: Linked list of 1 Clients
+Clients of index #5:
+
+Client 1
+Name: Omar Ashraf
+ID: 5705
+Email: o.ashraf2121@nu.edu.eg
+Phone: 01067238971
+Address: Alex
+
+Index #6: Linked list of 1 Clients
+Clients of index #6:
+
+Client 1
+Name: Ali kamal
+ID: 9961
+Email: a.kamal2102@nu.edu.eg
+Phone: 01067238971
+Address: Alex
+
+Index #7: Linked list of 1 Clients
+Clients of index #7:
+
+Client 1
+Name: Ali Morshdy
+ID: 41
+Email: a.ayman2149@nu.edu.eg
+Phone: 01009855094
+Address: altgamoo3
+
+Index #8: Linked list of 2 Clients
+Clients of index #8:
+
+Client 1
+Name: Mahmoud Ali
+ID: 11478
+Email: m.ali2290@nu.edu.eg
+Phone: 01009855094
+Address: altgamoo3
+
+Client 2
+Name: Mahmoud Kamal
+ID: 23281
+Email: m.kamal2102@nu.edu.eg
+Phone: 01067238971
+Address: Alex
+
+Index #9: Linked list of 2 Clients
+Clients of index #9:
+
+Client 1
 Name: Ahmed kamal
 ID: 2995
 Email: a.kamal2192@nu.edu.eg
 Phone: 01067238971
 Address: Zayed
+
+Client 2
+Name: Mohamed Salama
+ID: 19169
+Email: m.salama2212@nu.edu.eg
+Phone: 01009855094
+Address: altgamoo3
 
 Index #10: Linked list of 2 Clients
 Clients of index #10:
